@@ -41,10 +41,10 @@ if __name__ == '__main__':
         из влиятельнейших панк-групп России и СССР, и распался в
         2008 году в связи с кончиной Егора.
         
-        Я обучил языковую модель [ruGPT3](https://sbercloud.ru/ru/datahub/rugpt3family/demo-ru-gpt3-xl)
-        на 600+ песнях ГрОба для генерации текстов песен по названию, чтобы
-        понять как данная модель «видит» его творчество. Гитхаб с этим проектом доступен
-        [тут](http://github.com/armanbolatov/grob).
+        Чтобы понять как нейронные сети «видят» его творчество, я обучил языковую модель
+        [ruGPT3](https://sbercloud.ru/ru/datahub/rugpt3family/demo-ru-gpt3-xl)
+        на 600+ песнях ГрОба для генерации текстов песен по названию. Гитхаб с этим
+        проектом доступен [тут](http://github.com/armanbolatov/grob_streamlit).
         
         По вопросам писать — `a.bol[at]bc-pf[dot]org`.
         """)
@@ -63,10 +63,8 @@ if __name__ == '__main__':
             "inputs": f"<s>Название песни: {input}\nТекст песни:",
             "parameters": {
                 "max_new_tokens": 250,
-                "temperature": 1.0,
-                "repetition_penalty": 1.05,
-                "top_k": 5,
-                "top_p": 1,
+                "temperature": 0.7,
+                "repetition_penalty": 1,
                 "return_full_text": False,
             },
             "options": {
