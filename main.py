@@ -64,7 +64,7 @@ if __name__ == '__main__':
             "parameters": {
                 "max_new_tokens": 250,
                 "temperature": 0.7,
-                "repetition_penalty": 1,
+                "repetition_penalty": 1.1,
                 "return_full_text": False,
             },
             "options": {
